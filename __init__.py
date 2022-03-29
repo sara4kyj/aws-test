@@ -47,7 +47,7 @@ def predicts():
     img = cv2.resize(img, (224, 224)) / 255.0  # 모델에 맞는 input_shape로 리사이즈
     img = img.reshape((1,) + img.shape)  # 입력 데이터로 사용하기 위해 데이터 reshape
     # 모델 파일 불러와서 예측 수행
-    model = keras.models.load_model('/workspace/can_flask/model/VGG16_4.h5')
+    model = keras.models.load_model('/workspace/can_flask/model/MobileNetV2_04.h5')
     pred = model.predict(img)
 
     # 인덱스로 상품명 추출
